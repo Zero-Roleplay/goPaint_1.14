@@ -32,7 +32,10 @@ import net.arcaniax.gopaint.objects.brush.SplatterBrush;
 import net.arcaniax.gopaint.objects.brush.SprayBrush;
 import net.arcaniax.gopaint.objects.other.BlockType;
 import net.arcaniax.gopaint.objects.player.PlayerBrush;
+import net.kyori.adventure.key.Key;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 
@@ -51,13 +54,15 @@ public class GUI {
     private static final String headBlend = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWU5MTg0YWYxZGU3ZTViN2M0YWQ0MTFjNTZhZjRmOTMzNjY1MzYxNTkyOWJjOTVkNzEzYjdhNDJjZmYzZmJhZCJ9fX0=";
 
     public static Inventory Generate(PlayerBrush pb) {
-        Inventory inv = Bukkit.createInventory(null, 54, "§1goPaint Menu");
+        Inventory inv = Bukkit.createInventory(null, 54,
+                Component.text("§f𰁳䭬").font(Key.key("gui")).append(Component.text("§8goPaint Menu")));
         Update(inv, pb);
         return inv;
     }
 
     public static Inventory GenerateBrushes() {
-        Inventory inv = Bukkit.createInventory(null, 27, "§1goPaint Brushes");
+        Inventory inv = Bukkit.createInventory(null, 27,
+                Component.text("§f𱌓䭬").font(Key.key("gui")).append(Component.text("§8goPaint Menu")));
         Items item = new Items();
         // FILLER
         for (int x = 0; x < 27; x++) {
