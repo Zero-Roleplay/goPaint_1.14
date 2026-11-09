@@ -53,7 +53,7 @@ dependencies {
     implementation("org.bstats:bstats-base:3.2.1")
 }
 
-version = "3.1.0-SNAPSHOT"
+version = "3.1.0"
 
 bukkit {
     name = "goPaint"
